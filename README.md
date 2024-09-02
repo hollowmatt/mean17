@@ -1,3 +1,3 @@
 ### MEAN Sample
 This is a sample app from BezCoder:
-[MEAN Stack](git@github.com:hollowmatt/mean17.git)
+[MEAN Stack](https://www.bezkoder.com/angular-17-node-js-express-mongodb/)
