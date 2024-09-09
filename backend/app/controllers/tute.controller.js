@@ -97,7 +97,7 @@ exports.update = (req, res) => {
 exports.delete = (req, res) => {
   const id = req.params.id;
 
-  Tute.findByIdAndRemove(id)
+  Tute.findByIdAndDelete(id)
     .then(data => {
       if (!data) {
         res.status(404).send({

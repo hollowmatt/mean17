@@ -7,7 +7,7 @@ import { TutorialService } from '../../services/tutorial.service';
   templateUrl: './tutorials-list.component.html',
   styleUrls: ['./tutorials-list.component.css'],
 })
-export class TutorialsListComponent {
+export class TutorialsListComponent  {
   tutorials?: Tutorial[];
   currentTutorial: Tutorial = {};
   currentIndex = -1;
