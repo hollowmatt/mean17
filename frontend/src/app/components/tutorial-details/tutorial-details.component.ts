@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { toSignal } from "@angular/core/rxjs-interop";
 import { TutorialService } from '../../services/tutorial.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Tutorial } from '../../models/tutorial.model';
@@ -8,7 +9,7 @@ import { Tutorial } from '../../models/tutorial.model';
   templateUrl: './tutorial-details.component.html',
   styleUrls: ['./tutorial-details.component.css'],
 })
-export class TutorialDetailsComponent {
+export class TutorialDetailsComponent implements OnInit {
   @Input() viewMode = false;
 
   @Input() currentTutorial: Tutorial = {
@@ -27,8 +28,8 @@ export class TutorialDetailsComponent {
 
   ngOnInit(): void {
     if (!this.viewMode) {
-      this.message = '';
-      this.getTutorial(this.route.snapshot.params['id']);
+      this.getTutorial(this.route.snapshot.params["id"]);
+      console.log(this.message);
     }
   }
 
